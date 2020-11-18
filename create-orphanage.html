@@ -71,12 +71,28 @@
 
             <div class="input-block">
               <label for="whatsapp">Número de Whatsaap</label>
-              <textarea id="whatsapp" name="whatsapp"></textarea>
+              <input id="whatsapp" name="whatsapp" />
+            </div>
+
+            <div class="input-block images">
+              <label for="images">Foto</label>
+
+              <div class="images-upload" id="images">
+                <input name="images" placeholder="Cole o link da foto aqui" />
+                <button type="button">
+                  <img src="./public/images/add-file.svg" alt="Nova Imagem" />
+                </button>
+              </div>
             </div>
           </fieldset>
 
           <fieldset>
             <legend>Visitação</legend>
+
+            <div class="input-block">
+              <label for="instructions">Instruções</label>
+              <textarea id="instructions" name="instructions"></textarea>
+            </div>
           </fieldset>
         </form>
       </main>
