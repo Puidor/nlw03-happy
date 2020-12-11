@@ -49,3 +49,37 @@ function addPhotoField() {
   // adicionar o clone ao container de #images
   container.appendChild(newFieldContainer);
 }
+
+function deleteField(event) {
+  const span = event.currentTarget;
+
+  const fieldsContainer = document.querySelectorAll(".new-upload");
+
+  if (fieldsContainer.length <= 1) {
+    //Limpar o valor do campo
+    span.parentNode.children[0].value = "";
+    return;
+  }
+
+  //deletar o campo
+  span.parentNode.remove();
+}
+
+//Select Yes or No
+function toggleSelect(event) {
+  // Retirar a classe active dos botoes
+  document
+    .querySelectorAll(".button-select button")
+    .forEach((button) => button.classList.remove("active"));
+
+  // Colocar a classe active no clicado
+  const button = event.currentTarget;
+  button.classList.add("active");
+
+  // Atualizar o meu input hidden com valor selecionado
+  const input = document.querySelector('[name="opening_on_weekends"]');
+  console.log(input);
+
+  // Verificar se Sim ou Nao
+  input.value = button.dataset.value;
+}
